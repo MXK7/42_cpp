@@ -1,10 +1,10 @@
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-# include "PhoneBook.hpp"
 # include <iostream>
 # include <iomanip>
 # include <string>
+# include <sstream>
 
 class Contact
 {
@@ -16,14 +16,12 @@ class Contact
 		std::string _darkest;
 
 	  public:
-	    static std::string Contact::*GetLastNamePtr() { return &Contact::_last_name; }
-	    static std::string Contact::*GetFirstNamePtr() { return &Contact::_first_name; }
-	    static std::string Contact::*GetNicknamePtr() { return &Contact::_nickname; }
-	    static std::string Contact::*GetPhoneNumberPtr() { return &Contact::_phone_number; }
-	    static std::string Contact::*GetDarkestPtr() { return &Contact::_darkest; }
 
-		void setVar(std::string Contact::*var, const std::string &value);
-		std::string getVar(std::string Contact::*var);
+		Contact(void) {};
+		~Contact(void) {};
+
+		void setVar(std::string var, const std::string &value);
+		std::string getVar(std::string var);
 };
 
 #endif
