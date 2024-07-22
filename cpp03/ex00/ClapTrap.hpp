@@ -13,12 +13,19 @@ class ClapTrap
 	int damage_attack;
 
   public:
-    ClapTrap();
+    ClapTrap(void);
+    ClapTrap(std::string name);
     ~ClapTrap(void);
+	
+    ClapTrap    &operator=(const ClapTrap &other);
 
 	void attack(const std::string &target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
+
+	// TODO: TEST
+	void getHealth(void) const;
+	void getEnergy(void) const;
 };
 
 #endif
