@@ -22,10 +22,6 @@ class ClapTrap
 	void attack(const std::string &target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
-
-	// TODO: TEST
-	void getHealth(void) const;
-	void getEnergy(void) const;
 };
 
 #endif
