@@ -2,30 +2,23 @@
 
 int main()
 {
-    ClapTrap clap1("Bot");
+	std::cout << "### TESTING CLAPTRAP ###\n" << std::endl;
+	{
+		std::cout << "\033[34mConstructing\033[0m" << std::endl;
+		ClapTrap a;
+		ClapTrap b("Cody");
 
-    clap1.attack("Enemy");
-    clap1.takeDamage(10);
-    clap1.beRepaired(5);
-
-    ClapTrap clap2;
-
-    clap2 = clap1;
-    clap2.attack("Enemy");
-    clap2.takeDamage(10);
-    clap2.beRepaired(5);
-
-    ClapTrap clap3(clap2);
-    
-    clap3.attack("Enemy");
-    clap3.takeDamage(10);
-    clap3.beRepaired(5);
-
-    ClapTrap clap4;
-
-    clap4.attack("Enemy");
-    clap4.takeDamage(10);
-    clap4.beRepaired(5);
-
-    return 0;
+		std::cout << "\033[34mTesting\033[0m" << std::endl;
+		a.attack("some other robot");
+		a.takeDamage(10);
+		a.takeDamage(10);
+		a.beRepaired(5);
+		a.attack("some other other robot");
+		b.beRepaired(3);
+		for (int i = 0; i < 12; i++)
+			b.attack("Boby");
+		b.beRepaired(3);
+		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
+	}
+	return (0);
 }
