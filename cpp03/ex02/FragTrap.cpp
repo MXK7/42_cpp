@@ -15,7 +15,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	this->damage_attack = 30;
 	this->health = 100;
 }
-Cat.cpp
+
 FragTrap::FragTrap(const FragTrap &src) : ClapTrap(src) {
     std::cout << "Copy constructor" << COLOR_BLACK << " FragTrap " << COLOR_RESET << "called" << std::endl;
     return;
