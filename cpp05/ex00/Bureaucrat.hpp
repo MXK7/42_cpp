@@ -32,14 +32,17 @@ class Bureaucrat
 	// FUNCTION BASE
 	Bureaucrat(std::string name, int note);
 	~Bureaucrat();
+    Bureaucrat &operator=(const Bureaucrat &other);
 
 	// GETTERS
 	const std::string &GetName() const;
 	int GetGrade();
 
+	void SetGrade(int grade);
+
 	// INCREMENT
-	void incrementGrade(); // Augmente le grade
-	void decrementGrade(); // Diminue le grade
+	void incrementGrade();
+	void decrementGrade();
 
 	// FUNCTIONS EXCEPTION
 	class GradeTooHighException : public std::exception
@@ -47,8 +50,10 @@ class Bureaucrat
 		public:
 		const char *what() const throw()
 		{
-			// std::cout << "Error: you have exceeded the " << COLOR_YELLOW << "maximum" << COLOR_RESET << " score." << std::endl;
-			return ("Grade is too high!");
+			static std::string errorMsg = "Error: you have exceeded the "
+				+ std::string(COLOR_YELLOW) + "maximum"
+				+ std::string(COLOR_RESET) + " score.";
+			return (errorMsg.c_str());
 		}
 	};
 
@@ -57,8 +62,10 @@ class Bureaucrat
 		public:
 		const char *what() const throw()
 		{
-			// std::cout << "Error: you have exceeded the " << COLOR_RED << "minimum" << COLOR_RESET << " score." << std::endl;
-			return ("Grade is too low!");
+			static std::string errorMsg = "Error: you have exceeded the "
+				+ std::string(COLOR_RED) + "minimum" + std::string(COLOR_RESET)
+				+ " score.";
+			return (errorMsg.c_str());
 		}
 	};
 };
