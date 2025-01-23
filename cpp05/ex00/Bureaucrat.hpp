@@ -26,17 +26,17 @@ class Bureaucrat
 {
   private:
 	std::string name;
-	int grade[150];
+	int grade;
 
   public:
 	// FUNCTION BASE
 	Bureaucrat(std::string name, int note);
 	~Bureaucrat();
-    Bureaucrat &operator=(const Bureaucrat &other);
+	Bureaucrat &operator=(const Bureaucrat &other);
 
 	// GETTERS
-	const std::string &GetName() const;
-	int GetGrade();
+    std::string getName() const { return name; }
+    int getGrade() const { return grade; }
 
 	void SetGrade(int grade);
 
@@ -68,6 +68,8 @@ class Bureaucrat
 			return (errorMsg.c_str());
 		}
 	};
+
+	friend std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucrat);
 };
 
 #endif
