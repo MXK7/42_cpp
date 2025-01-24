@@ -33,7 +33,6 @@ Form::~Form() {
 	std::cout << "Destructor of the Form class called !" << std::endl;
 }
 
-//method
 const std::string	&Form::getName() const {
 	return (this->_name);
 }
@@ -56,7 +55,6 @@ void Form::beSigned(Bureaucrat const &other) {
 	this->_isSigned = true;
 }
 
-// exception
 const char *Form::GradeTooHighException::what() const throw() {
 	return ("Grade too high sorry !");
 }
@@ -65,14 +63,8 @@ const char *Form::GradeTooLowException::what() const throw() {
 	return ("Grade too low sorry !");
 }
 
-// output surcharge operator
 std::ostream &operator<<(std::ostream &flux, Form const &other) {
 	flux << other.getName() << ", grade to sign : " << other.getGradeToSign() << ", grade to execute : " << other.getGradeToExec() << ". Form ";
-
 	other.getIsSigned() ? (flux << "is signed.") : (flux << "isn't signed.");
-	// if (other.getIsSigned())
-	// 	flux << "is signed.";
-	// else
-	//  	flux << "isn't signed.";
 	return flux;
 }
