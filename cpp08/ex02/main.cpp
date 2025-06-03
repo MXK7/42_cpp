@@ -1,3 +1,6 @@
+// MutantStack hérite de std::stack et rend la pile itérable
+// en exposant les itérateurs du conteneur interne (c)
+// car une stack ne fournit pas d'itérateurs de base
 #include "MutantStack.hpp"
 
 int main()

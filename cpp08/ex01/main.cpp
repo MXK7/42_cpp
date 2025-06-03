@@ -1,3 +1,9 @@
+// shortestSpan
+// Plus petite différence triée
+// 2
+// longestSpan
+// max - min
+// 14
 #include "span.hpp"
 
 int main()
@@ -12,5 +18,6 @@ int main()
 
     std::cout << sp.shortestSpan() << std::endl; // doit afficher 2
     std::cout << sp.longestSpan() << std::endl;  // doit afficher 14
+
     return 0;
 }
