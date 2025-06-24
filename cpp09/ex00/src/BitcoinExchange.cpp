@@ -1,7 +1,3 @@
-//
-// Created by Eliam on 09/06/2025.
-//
-
 #include "../includes/BitcoinExchange.hpp"
 
 #include <fstream>

@@ -1,7 +1,3 @@
-//
-// Created by Eliam on 23/06/2025.
-//
-
 #include "../includes/PmergeMe.hpp"
 #include <ostream>
 

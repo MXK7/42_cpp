@@ -1,7 +1,3 @@
-//
-// Created by Eliam on 23/06/2025.
-//
-
 #ifndef RPN_HPP
 #define RPN_HPP
 

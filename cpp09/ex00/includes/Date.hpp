@@ -1,7 +1,3 @@
-//
-// Created by Eliam on 12/06/2025.
-//
-
 #ifndef DATE_HPP
 #define DATE_HPP
 #include <string>

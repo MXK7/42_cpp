@@ -1,7 +1,3 @@
-//
-// Created by Eliam on 09/06/2025.
-//
-
 #ifndef BITCOINEXCHANGE_HPP
 #define BITCOINEXCHANGE_HPP
 #include <map>

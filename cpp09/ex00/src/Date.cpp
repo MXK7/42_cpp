@@ -1,7 +1,3 @@
-//
-// Created by Eliam on 12/06/2025.
-//
-
 #include "../includes/Date.hpp"
 
 Date::Date() {}
