@@ -1,5 +1,11 @@
+//
+// Created by Eliam on 23/06/2025.
+//
+
 #include "../includes/Rpn.hpp"
 #include <ostream>
+#include <cstdlib>
+
 
 RPN::RPN() {
 }
@@ -58,7 +64,7 @@ bool RPN::math(std::string const &rpn) {
 			stack.pop();
 			stack.push(calculate(key[0], v1, v2));
 		} else
-			stack.push(atoi(key.c_str()));
+			stack.push(std::atoi(key.c_str()));
 	}
 	std::cout << stack.top() << std::endl;
 	return true;
